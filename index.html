@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyMate | Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#">StudyMate<span>.</span></a>
+    <span class="tagline">Plan better. Learn smarter.</span>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <p class="eyebrow">YOUR PERSONAL STUDY SPACE</p>
+      <h1>Make today <span>count.</span></h1>
+      <p>Organize your studies, one task at a time.</p>
+    </section>
+
+    <section class="stats">
+      <article class="stat-card">
+        <p>Total tasks</p>
+        <h2 id="totalTasks">0</h2>
+      </article>
+      <article class="stat-card">
+        <p>Completed</p>
+        <h2 id="completedTasks">0</h2>
+      </article>
+      <article class="stat-card">
+        <p>Progress</p>
+        <h2 id="progressText">0%</h2>
+      </article>
+    </section>
+
+    <section class="planner">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">STAY ORGANIZED</p>
+          <h2>My study tasks</h2>
+        </div>
+      </div>
+
+      <form id="taskForm">
+        <label for="taskInput">Task name</label>
+        <input
+          id="taskInput"
+          type="text"
+          placeholder="e.g. Practise HTML tables"
+          maxlength="100"
+          required
+        >
+
+        <div class="form-row">
+          <div class="field">
+            <label for="subjectInput">Subject</label>
+            <select id="subjectInput">
+              <option>HTML & CSS</option>
+              <option>JavaScript</option>
+              <option>Python</option>
+              <option>Mathematics</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="priorityInput">Priority</label>
+            <select id="priorityInput">
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+              <option value="Low">Low</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="add-button" type="submit">
+          + Add study task
+        </button>
+        <p id="message" class="message" role="status"></p>
+      </form>
+
+      <div class="task-heading">
+        <h3>Your task list</h3>
+        <button id="clearCompleted" class="text-button" type="button">
+          Clear completed
+        </button>
+      </div>
+
+      <ul id="taskList" class="task-list"></ul>
+      <p id="emptyMessage" class="empty-message">
+        No tasks yet. Add your first study task above!
+      </p>
+    </section>
+
+    <footer>
+      Built by our team · StudyMate 2026
+    </footer>
+  </main>
+</body>
+</html>
